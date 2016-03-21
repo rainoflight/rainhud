@@ -10,7 +10,7 @@
 		"wide"				"200"
 		"tall"				"150"
 		"visible"			"0"
-		"enabled"			"1"
+		"enabled"			"0"
 		"delta_item_start_y"	"9999"
 		"delta_item_end_y"		"9999"
 		"PositiveColor"			"48 255 48 255"

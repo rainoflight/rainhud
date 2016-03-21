@@ -41,13 +41,13 @@
 		"fieldName"     "CrossHairNormal"
 		"visible"    "0"
 		"enabled"    "0"
-		"zpos"      "1"
-		"xpos"      "c-101"
-		"ypos"      "c-100"
-		"wide"      "202"
-		"tall"      "203"
-		"font"      "CrossHairNormal"
-		"labelText"    "x"
+		"zpos"      "-22"
+		"xpos"      "c-100"
+		"ypos"      "c-101"
+		"wide"      "200"
+		"tall"      "201"
+		"font"      "size:40,outline:off"
+		"labelText"    "l"
 		"fgcolor"    "255 255 255 255"
 		"textAlignment"  "center"
 	}
@@ -58,18 +58,18 @@
 		"fieldName"	 	"Anything"
 		"visible"		"0"
 		"enabled"		"0"
-		"zpos"			"10"
+		"zpos"			"-2"
 
 		"xpos"			"c-100"
 		"ypos"			"c-100"
 		"wide"			"200"
-		"tall"			"200"
+		"tall"			"202"
 
-		"font"			"size:18,outline:off"
-		"labelText"		"i"
+		"font"			"size:22,outline:off"
+		"labelText"		"g"
 		"textAlignment"	"center"	
 		
-		"fgcolor"		"255 255 255 150"
+		"fgcolor"		"0 0 0 255"
 	}
 		Anything2 
 	{
@@ -84,11 +84,11 @@
 		"wide"			"200"
 		"tall"			"200"
 
-		"font"			"size:18,outline:off"
-		"labelText"		"o"
+		"font"			"size:22,outline:off"
+		"labelText"		"g"
 		"textAlignment"	"center"	
 		
-		"fgcolor"		"0 0 0 255"
+		"fgcolor"		"255 255 255 255"
 	}
 			Anything3 
 	{
@@ -101,13 +101,51 @@
 		"xpos"			"c-100"
 		"ypos"			"c-100"
 		"wide"			"200"
-		"tall"			"200"
+		"tall"			"198"
 
-		"font"			"size:16,outline:off"
-		"labelText"		"k"
+		"font"			"size:22,outline:off"
+		"labelText"		"g"
 		"textAlignment"	"center"	
 		
-		"fgcolor"		"0 0 0 100"
+		"fgcolor"		"0 0 0 255"
+	}
+				Anything4 
+	{
+		"controlName"	"CExLabel"
+		"fieldName"	 	"Anything"
+		"visible"		"0"
+		"enabled"		"0"
+		"zpos"			"-2"
+
+		"xpos"			"c-100"
+		"ypos"			"c-100"
+		"wide"			"198"
+		"tall"			"200"
+
+		"font"			"size:22,outline:off"
+		"labelText"		"g"
+		"textAlignment"	"center"	
+		
+		"fgcolor"		"0 0 0 255"
+	}
+				Anything5 
+	{
+		"controlName"	"CExLabel"
+		"fieldName"	 	"Anything"
+		"visible"		"0"
+		"enabled"		"0"
+		"zpos"			"-2"
+
+		"xpos"			"c-100"
+		"ypos"			"c-100"
+		"wide"			"202"
+		"tall"			"200"
+
+		"font"			"size:22,outline:off"
+		"labelText"		"g"
+		"textAlignment"	"center"	
+		
+		"fgcolor"		"0 0 0 255"
 	}
 
 
@@ -1510,274 +1548,62 @@
 		"wide"	 		"f0"
 		"tall"	 		"f0"
 	}
-	event QuestItem_Identify_Expand
+	
+	"MatchMakingContainer"
 	{
-		StopEvent QuestItem_Identify_Collapse 0
-		Animate Dimmer wide 285 Bias 0.1    0.0 0.4
-		Animate Dimmer xpos 0   Bias 0.1    0.0 0.4
+		"ControlName"				"EditablePanel"
+		"fieldName"					"MatchMakingContainer"
+		"visible"					"1"
+		"enabled"					"1"
+		"xpos"						"0"
+		"ypos"						"0"
+		"wide"						"f0"
+		"tall"						"f0"
 	}
 	
-	event QuestItem_Identify_Collapse
+	HudSpectatorExtras
 	{
-		StopEvent QuestItem_Identify_Expand 0
-		Animate Dimmer  wide 0  Accel 0.4 0.4
-		Animate Dimmer  xpos 142    Accel 0.4 0.4
+		"fieldName"					"HudSpectatorExtras"
+		"visible"					"1"
+		"enabled"					"1"
+		"xpos"						"0"
+		"ypos"						"0"
+		"wide"						"f0"
+		"tall"						"f0"
 	}
 	
-	event QuestItem_Complete_Expand
+	MatchSummary
 	{
-		Animate Dimmer wide 285 Deaccel 0.4 0.1
-		Animate Dimmer xpos 0   Deaccel 0.4 0.1
+		"fieldName"					"MatchSummary"
+		"visible"					"0"
+		"enabled"					"1"
+		"xpos"						"0"
+		"ypos"						"0"
+		"wide"						"f0"
+		"tall"						"f0"
 	}
 	
-	event QuestItem_Complete_Collapse
+	HudMatchStatus
 	{
-		Animate Dimmer  wide 0  Accel 0 0.4
-		Animate Dimmer  xpos 142    Accel 0 0.4
+		"fieldName"					"HudMatchStatus"
+		"visible"					"1"
+		"enabled"					"1"
+		"xpos"						"0"
+		"ypos"						"0"
+		"zpos"						"2"
+		"wide"						"f0"
+		"tall"						"f0"
 	}
- 
-	event QuestItem_Complete_Progress
-	{
-		Animate Dimmer  wide 0  Linear 0 5
-		Animate Dimmer  xpos 142    Linear 0 5
-	}
- 
-	event QuestItem_Options_Flash
-	{
-		Animate OptionsButton FgColor LightOrange   Linear 0     0.1
-		Animate OptionsButton FgColor TanLight      Linear 0.1   0.1
-		Animate OptionsButton FgColor LightOrange   Linear 0.2   0.1
-		Animate OptionsButton FgColor TanLight      Linear 0.3   0.1
-		Animate OptionsButton FgColor LightOrange   Linear 0.4   0.1
-		Animate OptionsButton FgColor TanLight      Linear 0.5   0.1
-	}
- 
-	//--------------------------------------------------------------------------
-	event QuestItem_Expand
-	{
-		Animate FrontFolderContainer        ypos 240    Gain 0.75 0 0.4
-		RunEventChild IdentifyButtonContainer QuestItem_Identify_Expand 0
-		RunEventChild TurnInContainer QuestItem_Complete_Expand 0
- 
-		SetInputEnabled FrontFolderContainer 0 0
-		RunEvent QuestItem_Options_Flash 1
-	}
- 
-	event QuestItem_Collapse
-	{
-		Animate FrontFolderContainer        ypos 0  Gain 0.75 0 0.4
-		RunEventChild IdentifyButtonContainer QuestItem_Identify_Collapse 0
-		RunEventChild TurnInContainer QuestItem_Complete_Collapse 0
- 
-		SetInputEnabled FrontFolderContainer 1 0
-	}
- 
-	event QuestItem_TurningIn
-	{
-		RunEventChild TurnInContainer QuestItem_Complete_Progress 0
-	}
- 
-	event QuestItem_Reset
-	{
-		Animate FrontFolderContainer        ypos 0  Linear 0 0
-		RunEventChild IdentifyButtonContainer QuestItem_Identify_Collapse 0
-		RunEventChild TurnInContainer QuestItem_Complete_Collapse 0
- 
-		SetInputEnabled FrontFolderContainer 1 0
-	}
- 
-	//--------------------------------------------------------------------------
-	event QuestItem_Operation2_Expand
-	{
-		StopEvent QuestItem_Operation2_Collapse 0
 	
-		RunEventChild IdentifyButtonContainer QuestItem_Identify_Expand 0.4
-		RunEventChild TurnInContainer QuestItem_Complete_Expand 0.4
-	
-		Animate FrontFolderContainer    xpos -270   Gain 0.75 0.4 0.3
-		Animate BackFolderContainer     xpos -270   Gain 0.75 0.4 0.3
-		Animate FrontFolderContainer    xpos -10    Gain 0.75 0.7 0.3
-		Animate BackFolderContainer     xpos 0  Gain 0.75 0.7 0.3
-		SetVisible FrontFolderContainer 0 0.7
-		SetVisible BackFolderContainer 1 0.7
- 
-		SetInputEnabled FrontFolderContainer 0 0
-		RunEvent QuestItem_Options_Flash 1
-	}
- 
-	event QuestItem_Operation2_Collapse
+	HudTeamStatus
 	{
-		StopEvent QuestItem_Operation2_Expand 0
- 
-		RunEventChild IdentifyButtonContainer QuestItem_Identify_Collapse 0
-		RunEventChild TurnInContainer QuestItem_Complete_Collapse 0
- 
-		Animate FrontFolderContainer    xpos -270   Gain 0.75 0.0 0.3
-		Animate BackFolderContainer     xpos -270   Gain 0.75 0.0 0.3
-		Animate FrontFolderContainer    xpos 0  Gain 0.75 0.3 0.4
-		Animate BackFolderContainer     xpos 0  Gain 0.75 0.3 0.4
-		SetVisible FrontFolderContainer 1 0.3
-		SetVisible BackFolderContainer 0 0.3
- 
-		SetInputEnabled FrontFolderContainer 1 0
-	}
- 
-	event QuestItem_Operation2_TurningIn
-	{
-		RunEventChild TurnInContainer QuestItem_Complete_Progress 0
-	}
- 
-	event QuestItem_Operation2_Reset
-	{
-		StopEvent QuestItem_Operation2_Collapse 0
-		StopEvent QuestItem_Operation2_Expand 0
- 
-		RunEventChild IdentifyButtonContainer QuestItem_Identify_Collapse 0
-		RunEventChild TurnInContainer QuestItem_Complete_Collapse 0
- 
-		Animate FrontFolderContainer    xpos 0  Linear 0 0
-		Animate BackFolderContainer     xpos 0  Linear 0 0
-		SetVisible FrontFolderContainer 1 0
-		SetVisible BackFolderContainer 0 0
-	 
-		SetInputEnabled FrontFolderContainer 1 0
-	}
- 
-	//--------------------------------------------------------------------------
-	event QuestItem_DisableFrontMouse
-	{
-		SetVisible FrontInputProxyPanel 0 0
-	}
- 
-	event QuestItem_EnableFrontMouse
-	{
-		SetVisible FrontInputProxyPanel 1 0
-	}
- 
-	event QuestItem_Expand_Halloween
-	{
-		StopEvent QuestItem_Collapse_Halloween 0
- 
-		// Immediately disable the mouse proxy so the inactive hint goes away
-		RunEventChild FrontFolderContainer  QuestItem_DisableFrontMouse 0
-		SetInputEnabled FrontFolderContainer 0 0
- 
-		// Slide the sleeve
-		Animate SleeveImage xpos 300 Bias 0.2  0.0 0.4
-		Animate EncodedStatus xpos 300 Bias 0.2  0.0 0.4
-		Animate ReadyToTurnInStatus xpos 300 Bias 0.2  0.0 0.4
-		Animate InactiveStatus xpos 300 Bias 0.2  0.0 0.4
- 
-		// Once the sleeve is off, then "unroll" the paper
-		FireCommand 0.4 "playsound ui/quest_folder_open_halloween.wav"
-		RunEventChild IdentifyButtonContainer QuestItem_Identify_Expand 0.4
-		RunEventChild TurnInContainer QuestItem_Complete_Expand 0.4
-		Animate FrontFolderContainer        ypos 240    Gain 0.75 0.4 0.4
-		Animate QuestPaperContainer         tall 300    Gain 0.75 0.4 0.4
- 
-		RunEvent QuestItem_Options_Flash 1
-	}
- 
-	event QuestItem_Collapse_Halloween
-	{
-		StopEvent QuestItem_Expand_Halloween 0
- 
-		// Roll up the paper
-		Animate FrontFolderContainer        ypos 0  Gain 0.75 0 0.4
-		Animate QuestPaperContainer         tall 70 Gain 0.75 0 0.4
-		RunEventChild IdentifyButtonContainer QuestItem_Identify_Collapse 0
-		RunEventChild TurnInContainer QuestItem_Complete_Collapse 0
-		RunEventChild FrontFolderContainer  QuestItem_EnableFrontMouse 0
- 
-		// Put the sleeve back
-		FireCommand 0.5 "playsound ui/quest_folder_keeper_slide_on_halloween.wav"
- 
-		Animate SleeveImage         xpos 15 Bias 0.8 0.5 0.2
-		Animate ReadyToTurnInStatus xpos 10     Bias 0.8 0.5 0.2
-		Animate InactiveStatus      xpos 10     Bias 0.8 0.5 0.2
-		Animate EncodedStatus       xpos 10     Bias 0.8 0.5 0.2
-		SetInputEnabled FrontFolderContainer 1 0
-	}
- 
-	event QuestItem_Reset_Halloween
-	{
-		StopEvent QuestItem_Expand_Halloween 0
-		SetVisible FrontFolderContainer 1 0
-		RunEventChild FrontFolderContainer  QuestItem_EnableFrontMouse 0
- 
-		// Roll up the paper
-		Animate FrontFolderContainer        ypos 0  Linear 0 0
-		Animate QuestPaperContainer         tall 70 Linear 0 0
-		Animate EncodedStatus               xpos 10 Bias 0  0 0
-		Animate ReadyToTurnInStatus         xpos 10 Bias 0  0 0
-		Animate InactiveStatus              xpos 10 Bias 0  0 0
-	
-		// Put the sleeve back
-		Animate SleeveImage xpos 15 Linear 0 0
-		SetInputEnabled FrontFolderContainer 1 0
-	}
- 
-	//--------------------------------------------------------------------------
-	event QuestItem_Front_Selected
-	{
-		StopEvent QuestItem_Front_OtherSelected 0
-		StopEvent QuestItem_Front_NoneSelected 0
- 
-		Animate         MainContainer       ypos 0  Gain 0.75 0 0.4
-	}
- 
-	event QuestItem_Front_OtherSelected
-	{
-		StopEvent QuestItem_Front_Selected 0
-		StopEvent QuestItem_Front_NoneSelected 0
- 
-		Animate         MainContainer       ypos 300    Gain 0.75 0 0.4
-	}
- 
- 
-	event QuestItem_Front_NoneSelected
-	{
-		StopEvent QuestItem_Front_Selected 0
-		StopEvent QuestItem_Front_OtherSelected 0
- 
-		Animate         MainContainer       ypos 120    Gain 0.75 0 0.4
-	}
- 
-	//--------------------------------------------------------------------------
-	event QuestItem_Back_Selected
-	{
-		StopEvent QuestItem_Back_OtherSelected 0
-		StopEvent QuestItem_Back_NoneSelected 0
- 
-		Animate         MainContainer       ypos 0  Gain 0.75 0 0.4
-	}
- 
-	event QuestItem_Back_OtherSelected
-	{
-		StopEvent QuestItem_Back_Selected 0
-		StopEvent QuestItem_Back_NoneSelected 0
- 
-		Animate         MainContainer       ypos 300    Gain 0.75 0 0.8
-	}
- 
- 
-	event QuestItem_Back_NoneSelected
-	{
-		StopEvent QuestItem_Back_Selected 0
-		StopEvent QuestItem_Back_OtherSelected 0
- 
-		Animate         MainContainer       ypos 0      Gain 0.75 0 0.4
-	}
- 
-	//--------------------------------------------------------------------------
-	event QuestItem_Highlight_On_Halloween
-	{	
-		SetVisible GlowImage 1 0   
-		Animate GlowImage Alpha 255 Bias 0.8 0 0.2
-	}
- 
-	event QuestItem_Highlight_Off_Halloween
-	{
-		Animate GlowImage Alpha 0 Bias 0.8 0 0.2
+		"fieldName"					"HudTeamStatus"
+		"visible"					"1"
+		"enabled"					"1"
+		"xpos"						"0"
+		"ypos"						"0"
+		"zpos"						"2"
+		"wide"						"f0"
+		"tall"						"f0"
 	}
 }

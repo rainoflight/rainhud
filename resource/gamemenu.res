@@ -28,6 +28,13 @@
 		"subimage" ""
 		"OnlyAtMenu" "1"
 	}
+	"PlayCompButton"
+    {
+        "label" "Competitive" 
+        "command" "ladder_ui_show"
+        "subimage" "glyph_practice"
+        "OnlyAtMenu" "1"
+    }	
 	"ServerBrowserButton"
 	{
 		"label" "Servers" 

@@ -154,10 +154,10 @@
 
 		}
 	}			
-	"BlueTeamLabel"
+	"blueteamlabel1"
 	{
 		"ControlName"		"CExLabel"
-		"fieldName"		"BlueTeamLabel"
+		"fieldName"		"blueteamlabel1"
 		"font"			"Roboto32"
 		"labelText"		"%blueteamname%"
 		"textAlignment"		"west"
@@ -249,10 +249,10 @@
 			"visible"		"0"
 		}
 	}							
-	"RedTeamLabel"
+	"redteamlabel11"
 	{
 		"ControlName"		"CExLabel"
-		"fieldName"		"RedTeamLabel"
+		"fieldName"		"redteamlabel1"
 		"font"			"Roboto32"
 		"labelText"		"%redteamname%"
 		"textAlignment"		"east"

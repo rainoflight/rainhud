@@ -1,3 +1,5 @@
+#base "../flame/flamecrosshair.res"
+
 "Resource/UI/HudPlayerHealth.res"
 {	
 	// player health data

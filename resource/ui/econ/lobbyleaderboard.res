@@ -16,26 +16,6 @@
 		"proportionaltoparent" "1"
 	}
 
-	"PageTitle"
-	{
-		"ControlName"	"CExLabel"
-		"fieldName"		"PageTitle"
-		"font"			"HudFontSmallBold"
-		"labelText"		"FRIENDS RATINGS"
-		"textAlignment"	"center"
-		"xpos"			"5"
-		"ypos"			"0"
-		"zpos"			"10"
-		"wide"			"f0"
-		"tall"			"20"
-		"autoResize"	"1"
-		"pinCorner"		"0"
-		"visible"		"1"
-		"enabled"		"1"
-		"fgcolor_override"	"89 81 71 255"
-		"proportionaltoparent" "1"
-	}
-
 	"Line"
 	{
 		"ControlName"		"EditablePanel"
@@ -43,21 +23,22 @@
 		"xpos"				"p0.05"
 		"ypos"				"18"
 		"wide"				"p0.9"
+		"zpos"				"1"
 		"tall"				"2"
-		"visible"			"1"
+		"visible"			"0"
 		"proportionaltoparent" "1"
 
 		"bgcolor_override"	"89 81 71 255"
 	}
 
-	"ScoresContainer"
+	"ScoreListScroller"
 	{
-		"ControlName"		"EditablePanel"
-		"fieldName"			"ScoresContainer"
-		"xpos"				"p0.1"
-		"ypos"				"p0.15"
-		"wide"				"p0.8"
-		"tall"				"p0.8"
+		"ControlName"		"ScrollableEditablePanel"
+		"fieldName"			"ScoreListScroller"
+		"xpos"				"p0.05"
+		"ypos"				"p0.1"
+		"wide"				"p0.95"
+		"tall"				"p0.9"
 		"visible"			"1"
 		"proportionaltoparent" "1"
 		"asynchandling"		"hide"

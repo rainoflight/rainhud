@@ -206,10 +206,10 @@
 
 		}
 	}			
-	"BlueTeamLabel"
+	"blueteamlabel1"
 	{
 		"ControlName"		"CExLabel"
-		"fieldName"		"BlueTeamLabel"
+		"fieldName"		"blueteamlabel1"
 		"font"			"RobotoBold28"
 		"labelText"		"%blueteamname%"
 		"fgcolor"		"Health Normal"
@@ -303,10 +303,10 @@
 			"visible"		"0"
 		}
 	}							
-	"RedTeamLabel"
+	"redteamlabel11"
 	{
 		"ControlName"		"CExLabel"
-		"fieldName"		"RedTeamLabel"
+		"fieldName"		"redteamlabel1"
 		"font"			"RobotoBold28"
 		"labelText"		"%redteamname%"
 		"textAlignment"		"east"
